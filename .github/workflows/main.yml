@@ -25,5 +25,5 @@ jobs:
           prerelease: false
           files: |
             folder/a.txt
-            folder2
+            folder2/*
             text.txt
