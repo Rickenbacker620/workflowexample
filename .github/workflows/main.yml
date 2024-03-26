@@ -23,4 +23,6 @@ jobs:
           body: description
           draft: false
           prerelease: false
-          files: Release.txt
+          files: |
+            folder/a.txt
+            text.txt
