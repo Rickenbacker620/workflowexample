@@ -18,9 +18,9 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: v0.2
-          name: Release modify
-          body: modify New Release.
+          tag_name: bundle
+          name: bundle name
+          body: description
           draft: false
           prerelease: false
           files: Release.txt
