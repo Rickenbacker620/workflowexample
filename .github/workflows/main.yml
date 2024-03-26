@@ -25,4 +25,5 @@ jobs:
           prerelease: false
           files: |
             folder/a.txt
+            folder2
             text.txt
