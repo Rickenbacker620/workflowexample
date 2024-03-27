@@ -12,9 +12,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Node Init
-        uses: actions/setup-node@v4
-
       - name: Generate Graph
         run: npx -p @mermaid-js/mermaid-cli mmdc -i input.mmd -o graph.pdf
 
