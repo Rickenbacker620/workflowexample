@@ -11,10 +11,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Build
-        run: echo 1 > Release.txt
-      - name: Test
-        run: cat Release.txt
+
+      - name: Node Init
+        uses: actions/setup-node@v4
+
+      - name: Generate Graph
+        run: npx -p @mermaid-js/mermaid-cli mmdc -i input.mmd -o graph.pdf
+
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
@@ -23,7 +26,4 @@ jobs:
           body: description
           draft: false
           prerelease: false
-          files: |
-            folder/a.txt
-            folder2/*
-            text.txt
+          files: graph.pdf
